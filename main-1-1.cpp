@@ -1,20 +1,23 @@
-#include <iostream>
-#include <string>
-using namespace std;
+//
+//  main.cpp
+//  Exam
+//
+//  Created by Alvin Wang on 9/9/2022.
+//
 
+#include "Unit.cpp"
+
+// main function definition
 int main()
 {
-    string array1[3][2] = {{"one","two"},{"three","four"},{"five","six"}};
-    string array2[3][2];
-    string string_2d_copy(array1,array2,3);
-    for(int i=0;i<3;i++)
-	{
-		for(int x=0;x<2;x++)
-		{
-			cout<<array2[i][x]<<" ";
-		}
-		cout<<endl;
-        system ("pause");
-	}
+// Declares an array of object of class Unit of size 3
+    Unit unit[3];
+// Creates each object using parameterized constructor
+    unit[0] = Unit(1, 900.00, 25300);
+    unit[1] = Unit(9, 800.50, 90000);
+    unit[2] = Unit(3, 100.75, 10000);
+
+    for(int c = 0; c < 3; c++)
+        unit[c].show();
     return 0;
 }
