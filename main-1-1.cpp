@@ -1,23 +1,21 @@
 //
 //  main.cpp
-//  Exam
+//  p4
 //
-//  Created by Alvin Wang on 9/9/2022.
+//  Created by Alvin Wang on 28/10/2022.
 //
 
-#include "Unit.cpp"
+#include "AirCraft.hpp"
+#include <iostream>
 
-// main function definition
+using namespace std;
 int main()
 {
-// Declares an array of object of class Unit of size 3
-    Unit unit[3];
-// Creates each object using parameterized constructor
-    unit[0] = Unit(1, 900.00, 25300);
-    unit[1] = Unit(9, 800.50, 90000);
-    unit[2] = Unit(3, 100.75, 10000);
-
-    for(int c = 0; c < 3; c++)
-        unit[c].show();
-    return 0;
+    string type;
+    cout << "Enter the type:";
+    cin >> type;
+    
+    cout << "\nType:" << aircraft.get_type() << endl;
+    cout << "Weight:" << aircraft.get_weight () << endl;
+    cout << "numberOfFlights: " << aircraft.get_numberOfFlights() << endl;
 }
